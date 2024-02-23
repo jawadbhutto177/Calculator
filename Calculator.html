@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+   
+        <form action="" name="cal">
+            <input type="text" placeholder="0" name="txt" id="box1">
+            <div>
+            <input type="reset" value="C" onclick="document.cal.txt.value+=''"  id="operator">
+            <input type="button" value="Del" onclick="delback()"  id="operator">
+            <input type="button" value="%" onclick="document.cal.txt.value+='%'"  id="operator">
+            <input type="button" value="+" onclick="document.cal.txt.value+='+'"  id="operator">
+        </div>
+
+
+
+
+            <div>
+            <input type="button" value="1" onclick="document.cal.txt.value+='1'">
+            <input type="button" value="2" onclick="document.cal.txt.value+='2'">
+            <input type="button" value="3" onclick="document.cal.txt.value+='3'">
+            <input type="button" value="-" onclick="document.cal.txt.value+='-'"  id="operator">
+        </div>
+
+
+
+            <div>
+            <input type="button" value="4" onclick="document.cal.txt.value+='4'">
+            <input type="button" value="5" onclick="document.cal.txt.value+='5'">
+            <input type="button" value="6" onclick="document.cal.txt.value+='6'">
+            <input type="button" value="*" onclick="document.cal.txt.value+='*'"  id="operator">
+        </div>
+
+
+            <div>
+            <input type="button" value="7" onclick="document.cal.txt.value+='7'">
+            <input type="button" value="8" onclick="document.cal.txt.value+='8'">
+            <input type="button" value="9" onclick="document.cal.txt.value+='9'">
+            <input type="button" value="/" onclick="document.cal.txt.value+='/'" id="operator">
+        </div>
+
+            <div>
+            <input type="button" value="0" onclick="document.cal.txt.value+='0'">
+            <input type="button" value="00" onclick="document.cal.txt.value+='00'">
+            <input type="button" value="." onclick="document.cal.txt.value+='.'">
+            <input type="button" value="=" onclick="document.cal.txt.value=document.cal.txt.value=eval(document.cal.txt.value)" id="equalbtn">
+        </div>
+        </form>
+
+
+    </div>
+
+
+
+    <script>
+    function delback(){
+        var value=document.getElementById("box1").value;
+        var fvalue=value.substr(0, value.length -1);
+        document.getElementById("box1").value=fvalue;
+    }
+    </script>
+
+</body>
+</html>
